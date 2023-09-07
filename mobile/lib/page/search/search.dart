@@ -1,4 +1,3 @@
-import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:jtech_anime_base/base.dart';
 
@@ -134,38 +133,38 @@ class SearchBarView extends StatelessWidget {
     Iterable<SearchRecord> options,
   ) {
     return const SizedBox();
-    return Align(
-      alignment: Alignment.topLeft,
-      child: Material(
-        color: Colors.transparent,
-        child: Card(
-          clipBehavior: Clip.antiAlias,
-          margin: const EdgeInsets.only(left: 4, right: 30, top: 8),
-          child: ListView.builder(
-            shrinkWrap: true,
-            padding: EdgeInsets.zero,
-            itemCount: min(options.length, 5),
-            itemBuilder: (_, i) {
-              final item = options.elementAt(i);
-              return _buildOptionsViewItem(item, () => onSelected(item));
-            },
-          ),
-        ),
-      ),
-    );
+    // return Align(
+    //   alignment: Alignment.topLeft,
+    //   child: Material(
+    //     color: Colors.transparent,
+    //     child: Card(
+    //       clipBehavior: Clip.antiAlias,
+    //       margin: const EdgeInsets.only(left: 4, right: 30, top: 8),
+    //       child: ListView.builder(
+    //         shrinkWrap: true,
+    //         padding: EdgeInsets.zero,
+    //         itemCount: min(options.length, 5),
+    //         itemBuilder: (_, i) {
+    //           final item = options.elementAt(i);
+    //           return _buildOptionsViewItem(item, () => onSelected(item));
+    //         },
+    //       ),
+    //     ),
+    //   ),
+    // );
   }
 
   // 构建搜索补充条件子项
-  Widget _buildOptionsViewItem(SearchRecord item, VoidCallback onTap) {
-    return ListTile(
-      onTap: onTap,
-      title: Text(item.keyword),
-      contentPadding: const EdgeInsets.only(left: 18, right: 8),
-      trailing: IconButton(
-        icon: const Icon(FontAwesomeIcons.trashCan,
-            color: Colors.black38, size: 18),
-        onPressed: () => recordDelete(item),
-      ),
-    );
-  }
+  // Widget _buildOptionsViewItem(SearchRecord item, VoidCallback onTap) {
+  //   return ListTile(
+  //     onTap: onTap,
+  //     title: Text(item.keyword),
+  //     contentPadding: const EdgeInsets.only(left: 18, right: 8),
+  //     trailing: IconButton(
+  //       icon: const Icon(FontAwesomeIcons.trashCan,
+  //           color: Colors.black38, size: 18),
+  //       onPressed: () => recordDelete(item),
+  //     ),
+  //   );
+  // }
 }

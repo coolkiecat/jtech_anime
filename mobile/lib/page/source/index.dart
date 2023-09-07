@@ -120,25 +120,25 @@ class _AnimeSourcePageState
   }
 
   // 展示卸载提示弹窗
-  Future<void> _showUninstallDialog(AnimeSource item) {
-    return MessageDialog.show(
-      context,
-      title: const Text('卸载'),
-      content: Text('是否卸载插件 ${item.name}'),
-      actionMiddle: TextButton(
-        child: const Text('取消'),
-        onPressed: () => router.pop(),
-      ),
-      actionRight: TextButton(
-        child: const Text('删除'),
-        onPressed: () async {
-          final result = await animeParser.uninstallSource(item);
-          if (result) logic.controller.refreshValue();
-          router.pop();
-        },
-      ),
-    );
-  }
+  // Future<void> _showUninstallDialog(AnimeSource item) {
+  //   return MessageDialog.show(
+  //     context,
+  //     title: const Text('卸载'),
+  //     content: Text('是否卸载插件 ${item.name}'),
+  //     actionMiddle: TextButton(
+  //       child: const Text('取消'),
+  //       onPressed: () => router.pop(),
+  //     ),
+  //     actionRight: TextButton(
+  //       child: const Text('删除'),
+  //       onPressed: () async {
+  //         final result = await animeParser.uninstallSource(item);
+  //         if (result) logic.controller.refreshValue();
+  //         router.pop();
+  //       },
+  //     ),
+  //   );
+  // }
 }
 
 /*

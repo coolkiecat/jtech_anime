@@ -1,0 +1,6 @@
+#!/bin/bash
+./buildapk
+
+sleep 1s
+
+./installapk

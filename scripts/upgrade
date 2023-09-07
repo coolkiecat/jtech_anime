@@ -1,0 +1,16 @@
+#!/bin/bash
+
+flutter upgrade --force
+
+sleep 1s
+
+cd ./base
+flutter packages upgrade
+
+sleep 1s
+cd ../mobile
+flutter packages upgrade
+
+sleep 1s
+cd ../desktop
+flutter packages upgrade

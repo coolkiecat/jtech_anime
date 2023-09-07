@@ -1,0 +1,6 @@
+#!/bin/bash
+git add .
+sleep 1s
+git commit -m "Sync"
+sleep 1s
+git push origin main

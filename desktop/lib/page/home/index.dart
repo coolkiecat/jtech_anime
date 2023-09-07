@@ -25,13 +25,13 @@ class _HomePageState extends LogicState<HomePage, _HomeLogic> {
 
   @override
   Widget buildWidget(BuildContext context) {
-    return WindowPage(
+    return const WindowPage(
+      actions: [],
       child: Center(
         child: StatusBox(
           status: StatusBoxStatus.loading,
         ),
       ),
-      actions: [],
     );
   }
 }

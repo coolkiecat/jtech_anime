@@ -187,6 +187,11 @@ class ChineseCupertinoLocalizations implements CupertinoLocalizations {
   List<String> get timerPickerSecondLabels => const <String>[];
 
   @override
-  // TODO: implement noSpellCheckReplacementsLabel
   String get noSpellCheckReplacementsLabel => throw UnimplementedError();
+
+  @override
+  String get lookUpButtonLabel => throw UnimplementedError();
+
+  @override
+  String get menuDismissLabel => throw UnimplementedError();
 }

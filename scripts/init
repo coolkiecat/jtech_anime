@@ -1,0 +1,24 @@
+#!/bin/bash
+
+cd ./base
+flutter clean
+sleep 1
+flutter pub get
+
+sleep 1
+
+cd ../mobile
+flutter clean
+sleep 1
+flutter pub get
+
+sleep 1
+
+cd ../desktop
+flutter clean
+sleep 1
+flutter pub get
+
+sleep 1
+cd ../base
+dart run build_runner watch --verbose
