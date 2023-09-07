@@ -1,0 +1,14 @@
+#!/bin/bash
+
+cd ./base
+flutter pub get
+
+sleep 1s
+
+cd ../mobile
+flutter pub get
+
+sleep 1s
+
+cd ../desktop
+flutter pub get

@@ -6,35 +6,45 @@
 
 请按照以下步骤来部署 '看番咩？' 项目：
 
-1. 克隆项目到本地：
+1. 克隆项目到本地(请使用GitBash Terminal)：
+
    ```
-   git clone https://github.com/WuXuBaiYang/jtech_anime.git
+   git clone git@github.com:coolkiecat/jtech_anime.git
    ```
 
-2. 进入项目目录：
+2. 初始化和监听目录：
+
    ```
-   cd jtech_anime/base
+   ./anime init
    ```
 
-3. 执行脚本生成数据库文件：
+3. 使用开发工具打开mobile或者deskktop目录开始使用吧~
+
+## 常用命令
+
+1. 清理项目
+
    ```
-   dart pub run build_runner
-   // 以下是持续监听命令
-   // 会让控制台阻塞等待，执行后面的命令需要重开窗口
-   dart pub run build_runner watch --verbose
+   ./anime clean
    ```
 
-4. 进入到mobilie(移动端项目)/desktop(桌面端项目)：
+2. 获取依赖
+
    ```
-   cd ../mobile
-   或
-   cd ../desktop
+   ./anime pubGet
    ```
-5. 拉取依赖
+
+3. 监听和自动生成代码
+
    ```
-   flutter pub get
+   ./anime watch
    ```
-6. 使用开发工具打开mobile或者deskktop目录开始使用吧~
+
+4. 更新所有依赖
+
+   ```
+   ./anime upgrade
+   ```
 
 ## 未来计划
 
@@ -52,13 +62,14 @@
 ## 注意事项
 
 - 在部署之前，请确保已经正确安装了 Flutter 3.13.2 版本。
+- 要使用脚本，请安装Bash环境(如GitBash)，并切换打开到项目根目录
 - 如果遇到任何问题，请尝试重新拉取依赖和重新生成数据库文件。
 - 如果问题仍然存在，请查看项目的文档或提交问题到项目的 GitHub 页面以获取帮助。
 
 ## 贡献
 
 - <img alt="猫男的头像" height="20" width="20" src="./readme/avatar_mao.jpg"/> 猫男(的老婆)
-    - 来自'煎蛋发大财' QQ群
+  - 来自'煎蛋发大财' QQ群
 
 如果您对 '看番咩？' 项目有任何改进或建议，我们非常欢迎您的贡献！请在 GitHub 上提交拉取请求或问题以帮助改进这个项目。
 
